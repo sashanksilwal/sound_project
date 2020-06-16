@@ -117,18 +117,18 @@ body {
   height: 10rem;
 }
 .item1{
-  position: relative;
+  position: fixed;
   top: 70%;
   left: 10%;
 }
 #item2{
-  position: relative;
-  top: 45%;
+  position: fixed;
+  top: 70%;
   left: 40%;
 }
 .item3{
-  position: relative;
-  top: 25%;
+  position: fixed;
+  top: 68%;
   left: 60%;
 }
 .item4{
