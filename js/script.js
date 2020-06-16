@@ -19,6 +19,7 @@ pauseBtn.addEventListener("click",()=>{
         Footsteps_mp3.play();
     }else{
         Footsteps_mp3.pause();
+        main_page = true;
     }
 })
 
