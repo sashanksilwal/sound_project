@@ -8,6 +8,7 @@ let ball_page=false;
 let car_page=false;
 let pills_page=false;
 let frame_page=false;
+
 let items= ["item1", "item2", "item3","item4"]
 let overlay = $("#overlay"),
         fab = $(".fab");
@@ -38,6 +39,7 @@ itemCar1.addEventListener("click",()=>{
     car_page=true;
     pills_page=false;
     ball_page=false;
+    frame_page= false;
     Car_mp3.play();
 })
 
@@ -47,6 +49,7 @@ itemMeds2.addEventListener("click",()=>{
     pills_page= true; 
     ball_page= false;
     car_page= false;
+    frame_page= false;
     Pill_mp3.play();
 
 })
@@ -56,22 +59,21 @@ itemBall3.addEventListener("click",()=>{
     ball_page = true;
     pills_page= false;
     car_page=false;
+    frame_page= false;
     Ball_mp3.play();
 
 })
 itemFrame4.addEventListener("click",()=>{
     $("#item4").fadeOut(4000);
-    $("#typedtext").fadeIn(0);
     $('#pausebtn').fadeIn(500);
-    frame_page=true;
+    $("#typedtext").fadeIn(0);
+    bg_image.style.background = "url('white.png')"; 
+    frame_page= true;
     ball_page = false;
     pills_page= false;
-    car_page=false;
-
-     bg_image.style.background = "url('white.png')"; 
+    car_page  = false;
     Frame_mp3.play();
-    setTimeout(() =>{typewriter();}, 85000)
-    $('#pausebtn').fadeOut(110000);
+    setTimeout(() =>{typewriter();}, 86000)
 
 })
 
@@ -105,6 +107,11 @@ pauseBtn.addEventListener("click",()=>{
         Car_mp3.play();
     }else{
         Car_mp3.pause();
+    }
+    if (Frame_mp3.paused && frame_page==true){
+        Frame_mp3.play();
+    }else{
+        Frame_mp3.pause();
     }
 
 })
