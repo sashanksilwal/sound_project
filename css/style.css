@@ -130,15 +130,23 @@ body {
 
 #item1_img:hover{
   height: 12rem;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 #item2_img:hover{
   height: 12rem;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 #item3_img:hover{
   height: 12rem;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 #item4_img:hover{
   height: 12rem;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 
