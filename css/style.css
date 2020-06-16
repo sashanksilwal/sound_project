@@ -35,7 +35,6 @@ body {
       width: 100vw;
       background: url("../media/images/website_bg_mobile.png");
       background-size: cover;
-      /* background-repeat: no-repeat; */
     }
     .box_img{
       top: 63%;
@@ -95,27 +94,33 @@ body {
 .item{
   height:10rem;
   width: 10rem;
+  top: 20%;
+  left: 0%;
   
-}
-.item2{
-  height:20rem;
-  width: 20rem;
 }
 .item_no_display{
   display: none;
 }
-.item_display{
-  display: inline;
-}
+/* .item_display{
+  display:;
+} */
 .item img{
   height: 10rem;
 }
-
 .item1{
-  top: 63%;
-  left: 27%;
   position: relative;
-
+  top: 70%;
+  left: 10%;
+}
+#item2{
+  position: relative;
+  top: 45%;
+  left: 40%;
+}
+.item3{
+  position: relative;
+  top: 25%;
+  left: 60%;
 }
 
 #item1_img:hover{
@@ -127,9 +132,6 @@ body {
 #item3_img:hover{
   height: 12rem;
 }
-
-
-
 
 
 
@@ -153,7 +155,6 @@ body {
   right: 2rem;
   top:2rem;
   color: #fff;
-  /* background: black; */
   height: 4%;
   width: 2.5%;
   -webkit-transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
