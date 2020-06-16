@@ -4,8 +4,8 @@ body {
 }
 
 .bg_image{
-  height:100vh;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background: url("../media/images/website_bg.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,63 +15,66 @@ body {
 
 .box_img{
   z-index: 2;
-  /* width: 20%;
-  height: 35%; */
-  /* min-width: 260px; */
-  /* min-height: 290px; */
-  /* max-width: 400px; */
-  /* max-height: 400px; */
   top: 63%;
   left: 57%;
   position: relative;
   padding:0;
-  /* background: url("../media/images/box.png"); */
-  /* background-size: cover;
-  background-repeat: no-repeat; */
   position: absolute;
   transition: 1.5 linear all;
-  /* transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: linear; */
 }
 .box_img:hover{
   cursor: pointer;
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+  and (min-device-width: 200px) 
+  and (max-device-width: 580px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     .bg_image{
-      height:20vh;
-      width: 100%;
+      height:100vh;
+      width: 100vw;
+      background: url("../media/images/website_bg_mobile.png");
+      background-size: cover;
+      /* background-repeat: no-repeat; */
     }
     .box_img{
-      width: 10%;
-      height: 17%;
-      /* min-width: 160px; */
+      top: 63%;
+      left: 37%;
+      
+    }
+    .box_img>img{
+      height: 10rem;
     }
 }
 
-#pause{
+.pause{
   position: fixed;
   top: 3%;
   right: 3%;
+  height: 2.5rem;
+  width: 3.5rem;
+  display: none;
   z-index: 10;
-  height: 15px;
-  width: 15px;
-  background-image: url("../media/images/play.png");
-  background-color: red;
 }
 
-#pause:hover{
+.pause:hover{
   cursor: pointer;
 }
 
+.info{
+  position: fixed;
+  top: 4%;
+  right: 3%;
+  height: 1.5rem;
+  width: 2.5rem;
+}
+
+.info:hover{
+  cursor: pointer;
+}
 .bg_image_second{
   height:100vh;
   width: 100%;
-  background: url("../media/images/website_bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -79,17 +82,19 @@ body {
   background-color: #464646;
 }
 
-@media only screen 
+/* @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     .bg_image_second {
-      background-image: url("../media/images/website_bg_mobile.png");
+      background-image: url("website_bg mobile.png");
     }
-}
+} */
+
 .item{
   height:10rem;
   width: 10rem;
+  
 }
 .item2{
   height:20rem;
@@ -103,8 +108,6 @@ body {
 }
 .item img{
   height: 10rem;
-  
-  /* width: auto; */
 }
 
 .item1{
@@ -122,4 +125,104 @@ body {
 }
 #item3_img:hover{
   height: 12rem;
+}
+
+
+
+
+
+
+/* Inspired from .. */
+
+.dark-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  -webkit-transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
+  transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
+}
+
+.fab {
+  z-index: 5;
+  cursor: pointer;
+  background-image: url("media/images/info.png");
+  position: fixed;
+  right: 2rem;
+  top:2rem;
+  color: #fff;
+  background: black;
+  height: 4%;
+  width: 2.5%;
+  box-shadow: 0 5px 5px rgba(126, 111, 111, 0.39);
+  -webkit-transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
+  transition: all 600ms cubic-bezier(0.200, 0.965, 0.000, 1.005);
+}
+
+.fab.active {
+  cursor: default;
+  background: #FFF;
+  background-image: url("../media/images/wood.JPG");
+  font-family: "Chalkduster";
+  color:black;
+  letter-spacing: 0.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: .125em;
+  width: 450px;
+  height: 350px;
+  box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
+  top: 10%;
+  right: calc(50% - 250px);
+}
+
+.fab-icon {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-12px, -12px);
+  -ms-transform: translate(-12px, -12px);
+  transform: translate(-12px, -12px);
+  line-height: 24px;
+  width: 24px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.active .fab-icon {
+  display: none;
+}
+
+.active .protect {
+  background: none;
+}
+
+.cntt-wrapper {
+  display: none;
+}
+
+.active .cntt-wrapper {
+  display: block;
+}
+
+#fab-hdr {
+  position: absolute;
+  width: 100%;
+  background: black;
+}
+
+#fab-hdr h3 {
+  padding-left: 30px;
+  color: white;
+}
+
+.cntt {
+  padding: 60px 35px 0 35px;
+  height: 100%;
+  background-image: url("../media/images/wood.JPG");
 }

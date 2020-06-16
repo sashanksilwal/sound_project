@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memory Box</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <link href="//db.onlinewebfonts.com/c/bd9805cba4fdbd10e6f9d097dab9225f?family=Chalkduster" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <audio id="Footsteps" onended="myFunction()">
@@ -13,10 +15,40 @@
         Your browser does not support the audio element.
       </audio>
     
-    <div class="bg_image" id="bg_image">
-        <div id="pause">
-            
+        <div class="bg_image" id="bg_image">
+            <div  id="infodiv">
+                    
+                <div id="overlay"></div>
+                <div class="fab">
+                <!-- <img src="media/images/info.png" class="info" id="infobtn"> -->
+
+                <form class='cntt-wrapper'>
+                    <div id="fab-hdr">
+                        <h3>About</h3>
+                    </div>
+
+                    <div class="cntt">
+                        <p>Memory Box is a sound journey about loss, grief, and acceptance, made by Tonia Zhang, Sashank Silwal, and Usman Ali.</p>
+                        <p>The main character is a father who recently lost his son. Together with his wife, they are learning to accept the reality of what happened and move on.</p>
+                    </div>
+
+                 </form>
+            </div>
+            </div>
         </div>
+
+
+        <!-- <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--5-col mdl-cell--12-col-tablet mdl-shadow--2dp center m-t-100">
+    
+            </div>
+        </div> -->
+
+        <div  id="pausediv">
+            <img src="media/images/play.png" class="pause" id="pausebtn">
+         </div>
+    
+        
         <div class="box_img" id="box">
             <img src="media/images/box.png" >
         </div>
