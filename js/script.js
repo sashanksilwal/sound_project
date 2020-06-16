@@ -11,13 +11,14 @@ let overlay = $("#overlay"),
 
 let itemCar1 = document.getElementById("item1_img"),
     itemMeds2 = document.getElementById("item2_img"),
-    itemBall3 = document.getElementById("item3_img");
+    itemBall3 = document.getElementById("item3_img"),
+    itemFrame4 = document.getElementById("item4_img");
 
 let Footsteps_mp3 = document.getElementById("Footsteps");
 let Car_mp3 = document.getElementById("Car");
 let Pill_mp3 = document.getElementById("Meds");
 let Ball_mp3 = document.getElementById("Ball");
-
+let Frame_mp3 = document.getElementById("Frame");
 
 let item1 = false,
     item2 = false,
@@ -28,20 +29,27 @@ fab.on('click', openFAB);
 overlay.on('click', closeFAB);
 
 itemCar1.addEventListener("click",()=>{
-    changeBackground()
+    changeBackground(8000,0,0)
     Car_mp3.play();
 })
 
 itemMeds2.addEventListener("click",()=>{
-    changeBackground() 
+    changeBackground(0,8000,0) 
     Pill_mp3.play();
 
 })
 itemBall3.addEventListener("click",()=>{
-    changeBackground()
+    changeBackground(0,0,8000)
     Ball_mp3.play();
 
 })
+itemFrame4.addEventListener("click",()=>{
+    $("#item4").fadeOut(4000);
+     bg_image.style.background = "url('white.png')"; 
+    Frame_mp3.play();
+
+})
+
 
 box.addEventListener("click",()=>{   
     $("#infodiv").fadeOut(500);
@@ -140,10 +148,10 @@ function checkClick(){
 }
 
 //change the background and remove the item
-function changeBackground(){
-    $("#item1").fadeOut(100);
-    $("#item2").fadeOut(100);
-    $("#item3").fadeOut(100);
+function changeBackground(a,b,c){
+    $("#item1").fadeOut(a);
+    $("#item2").fadeOut(b);
+    $("#item3").fadeOut(c);
     bg_image.style.background = "url('black.png')"; 
 }
 
