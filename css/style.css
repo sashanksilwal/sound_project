@@ -10,7 +10,8 @@ body {
   font-weight: bold;
   margin-left: 35vw;
   margin-top: 20vh;
-  /* margin-right: auto; */
+  margin-right: auto;
+  display:none;
 }
 .bg_image{
   height: 100vh;

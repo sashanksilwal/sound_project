@@ -61,6 +61,7 @@ itemBall3.addEventListener("click",()=>{
 })
 itemFrame4.addEventListener("click",()=>{
     $("#item4").fadeOut(4000);
+    $("#typedtext").fadeIn(0);
      bg_image.style.background = "url('white.png')"; 
     Frame_mp3.play();
     setTimeout(() =>{typewriter();}, 85000)
