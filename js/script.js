@@ -98,6 +98,7 @@ function checkClick(){
         $("#item1").fadeOut(100);
         $("#item2").fadeOut(100);
         $("#item3").fadeOut(100);
+        $("#item4").fadeIn(100);
         bg_image.style.background = "url('media/images/Empty.png')"; 
         bg_image.setAttribute("class", "bg_image_second");
 
@@ -138,6 +139,7 @@ function checkClick(){
     }
 }
 
+//change the background and remove the item
 function changeBackground(){
     $("#item1").fadeOut(100);
     $("#item2").fadeOut(100);

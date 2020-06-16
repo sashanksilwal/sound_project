@@ -122,6 +122,11 @@ body {
   top: 25%;
   left: 60%;
 }
+.item4{
+  position: relative;
+  top: 45%;
+  left: 60%;
+}
 
 #item1_img:hover{
   height: 12rem;
@@ -130,6 +135,9 @@ body {
   height: 12rem;
 }
 #item3_img:hover{
+  height: 12rem;
+}
+#item4_img:hover{
   height: 12rem;
 }
 
