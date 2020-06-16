@@ -4,6 +4,9 @@ let pauseBtn = document.getElementById("pausebtn");
 
 let main_page=false;
 let second_page=false;
+let ball_page=false;
+let car_page=false;
+let pills_page=false;
 
 let items= ["item1", "item2", "item3","item4"]
 let overlay = $("#overlay"),
@@ -29,17 +32,30 @@ fab.on('click', openFAB);
 overlay.on('click', closeFAB);
 
 itemCar1.addEventListener("click",()=>{
-    changeBackground(8000,0,0)
+
+    changeBackground(8000,0,0);
+    $('#pausebtn').fadeIn(500); 
+    car_page=true;
+    pills_page=false;
+    ball_page=false;
     Car_mp3.play();
 })
 
 itemMeds2.addEventListener("click",()=>{
-    changeBackground(0,8000,0) 
+    changeBackground(0,8000,0);
+    $('#pausebtn').fadeIn(500);
+    pills_page= true; 
+    ball_page= false;
+    car_page= false;
     Pill_mp3.play();
 
 })
 itemBall3.addEventListener("click",()=>{
-    changeBackground(0,0,8000)
+    changeBackground(0,0,8000);
+    $('#pausebtn').fadeIn(500);
+    ball_page = true;
+    pills_page= false;
+    car_page=false;
     Ball_mp3.play();
 
 })
@@ -66,6 +82,22 @@ pauseBtn.addEventListener("click",()=>{
     }else{
         Footsteps_mp3.pause();
     }
+    if (Ball_mp3.paused && ball_page==true){
+        Ball_mp3.play();
+    }else{
+        Ball_mp3.pause();
+    }
+    if (Pill_mp3.paused && pills_page==true){
+        Pill_mp3.play();
+    }else{
+        Pill_mp3.pause();
+    }
+    if (Car_mp3.paused && car_page==true){
+        Car_mp3.play();
+    }else{
+        Car_mp3.pause();
+    }
+
 })
 
 function myFunction() {
@@ -84,19 +116,20 @@ function myFunction() {
 
 function carFunction(){
     console.log("hello you have ended car sound");
+    $('#pausebtn').fadeOut(500);
     // $('#pausebtn').fadeOut(500); 
     item1 = true;
     checkClick();  
 }
 function medsFunction(){
     console.log("hello you have ended pills sound");
-    // $('#pausebtn').fadeOut(500); 
+    $('#pausebtn').fadeOut(500); 
     item2 = true;
     checkClick();  
 }
 function ballFunction(){
     console.log("hello you have ended ballsound");
-    // $('#pausebtn').fadeOut(500); 
+    $('#pausebtn').fadeOut(500); 
     item3 = true;
     checkClick();  
 }
