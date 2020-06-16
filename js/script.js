@@ -1,6 +1,8 @@
 let box = document.getElementById("box");
 let bg_image = document.getElementById("bg_image");
 let pauseBtn = document.getElementById("pausebtn");
+let homeBtn = document.getElementById("homebtn");
+
 
 let main_page=false;
 let second_page=false;
@@ -8,6 +10,7 @@ let ball_page=false;
 let car_page=false;
 let pills_page=false;
 let frame_page=false;
+let end= false;
 
 let items= ["item1", "item2", "item3","item4"]
 let overlay = $("#overlay"),
@@ -74,6 +77,13 @@ itemFrame4.addEventListener("click",()=>{
     car_page  = false;
     Frame_mp3.play();
     setTimeout(() =>{typewriter();}, 86000)
+    // $('#pausebtn').fadeOut(110000);
+    // if (end== true){
+    //   console.log("hello deer");
+    //   $('#homebtn').fadeIn(500);
+
+    // }
+
 
 })
 
@@ -262,6 +272,11 @@ var aText = new Array(
       }
      } else {
       setTimeout("typewriter()", iSpeed);
+      end=true;
+      console.log("it has finished writing");
+      $('#pausebtn').fadeOut(5000);
+      $('#homebtn').fadeIn(10000)
+
      }
     }
     

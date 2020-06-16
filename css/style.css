@@ -65,6 +65,19 @@ body {
   display: none;
   z-index: 10;
 }
+.home{
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  height: 4.5rem;
+  width: 5rem;
+  display: none;
+  z-index: 10;
+  text-decoration: none;
+}
+.home:hover{
+  cursor: pointer;
+}
 
 .pause:hover{
   cursor: pointer;
