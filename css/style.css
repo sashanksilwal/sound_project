@@ -60,7 +60,7 @@ body {
   z-index: 10;
   height: 15px;
   width: 15px;
-  /* background-image: url("../media/images/play.png"); */
+  background-image: url("../media/images/play.png");
   background-color: red;
 }
 
@@ -83,8 +83,43 @@ body {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-  .bg_image_second {
-    
-    background-image: url("../media/images/website_bg_mobile.png");
-  }
+    .bg_image_second {
+      background-image: url("../media/images/website_bg_mobile.png");
+    }
+}
+.item{
+  height:10rem;
+  width: 10rem;
+}
+.item2{
+  height:20rem;
+  width: 20rem;
+}
+.item_no_display{
+  display: none;
+}
+.item_display{
+  display: inline;
+}
+.item img{
+  height: 10rem;
+  
+  /* width: auto; */
+}
+
+.item1{
+  top: 63%;
+  left: 27%;
+  position: relative;
+
+}
+
+#item1_img:hover{
+  height: 12rem;
+}
+#item2_img:hover{
+  height: 12rem;
+}
+#item3_img:hover{
+  height: 12rem;
 }

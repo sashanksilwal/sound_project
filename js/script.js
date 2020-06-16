@@ -4,12 +4,13 @@ let Footsteps_mp3 = document.getElementById("Footsteps");
 let pauseBtn = document.getElementById("pause");
 let main_page=false;
 let second_page=false;
+let items= ["item1", "item2", "item3","item4"]
 
 
 box.addEventListener("click",()=>{
-    started = true;
+    main_page = true;
     box.style.display="none";
-    bg_image.style.background = "url('../black.png')"; 
+    bg_image.style.background = "url('black.png')"; 
     Footsteps_mp3.play();
     // bg_image.style.backgroundColor = "black";
 })
@@ -19,7 +20,6 @@ pauseBtn.addEventListener("click",()=>{
         Footsteps_mp3.play();
     }else{
         Footsteps_mp3.pause();
-        main_page = true;
     }
 })
 
@@ -29,4 +29,7 @@ function myFunction() {
     console.log("hello you have ended the sound");
     bg_image.setAttribute("class", "bg_image_second");
     bg_image.style.background = "url('../media/images/inside_a_box.jpg')"; 
+    for (let i=0; i<items.length-1; i++){
+        document.getElementById(items[i]).setAttribute("class", "item ", items[i] ," item_display ");
+    }
 }
