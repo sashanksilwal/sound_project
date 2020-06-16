@@ -7,7 +7,7 @@ let second_page=false;
 let ball_page=false;
 let car_page=false;
 let pills_page=false;
-
+let frame_page=false;
 let items= ["item1", "item2", "item3","item4"]
 let overlay = $("#overlay"),
         fab = $(".fab");
@@ -62,9 +62,16 @@ itemBall3.addEventListener("click",()=>{
 itemFrame4.addEventListener("click",()=>{
     $("#item4").fadeOut(4000);
     $("#typedtext").fadeIn(0);
+    $('#pausebtn').fadeIn(500);
+    frame_page=true;
+    ball_page = false;
+    pills_page= false;
+    car_page=false;
+
      bg_image.style.background = "url('white.png')"; 
     Frame_mp3.play();
     setTimeout(() =>{typewriter();}, 85000)
+    $('#pausebtn').fadeOut(110000);
 
 })
 
