@@ -105,14 +105,20 @@ body {
   position: relative;
 }
 
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 580px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
     .bg_image_second {
-      background-image: url("website_bg mobile.png");
+      /* -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; */
+      left: 50%;
+    margin-left: -512px; 
+    /* background: url("black.png"); */
     }
-} */
+}
 
 .item{
   height:10rem;
@@ -204,7 +210,7 @@ body {
 .fab.active {
   cursor: default;
   background: #FFF;
-  background-image: url("../media/images/wood.JPG");
+  background-image: url("../media/images/woodDesign.jpg");
   font-family: "Chalkduster";
   color:black;
   letter-spacing: 0.2rem;
