@@ -126,7 +126,8 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #464646;
-  position: relative;
+  /*position: relative;*/
+  position: fixed;
 }
 
 @media only screen 

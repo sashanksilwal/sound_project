@@ -95,6 +95,7 @@ itemFrame4.addEventListener("click",()=>{
     $('#pausebtn').fadeIn(500);
     $("#typedtext").fadeIn(0);
     $('#black-bg').hide();
+    $('#black-bg').css("height", "0");
 
     bg_image.style.background = "url('white.png')"; 
     frame_page= true;
@@ -173,6 +174,7 @@ function myFunction() {
     console.log("hello you have ended the sound");
     $('#pausebtn').fadeOut(500);
     $('#bg_image').show(); 
+    $('#black-bg').css("height", "0");
     bg_image.style.background = "url('media/images/Pic.png')"; 
     bg_image.setAttribute("class", "bg_image_second");
 
