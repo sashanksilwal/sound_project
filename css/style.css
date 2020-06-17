@@ -242,7 +242,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: .125em;
-  width: 350px;
+  width: 450px;
   height: 350px;
   box-shadow: 0 25px 35px 0 rgba(0, 0, 0, 0.35);
   top: 10%;
@@ -284,8 +284,7 @@ body {
 
 #fab-hdr {
   position: absolute;
-  /* width: 100%; */
-  width: 420px;
+  width: 100%;
   background: black;
 }
 
@@ -296,8 +295,6 @@ body {
 
 .cntt {
   padding: 60px 35px 0 35px;
-  /* height: 100%; */
-  width: 350px;
-  height: 350px;
+  height: 100%;
   background-image: url("../media/images/wood.JPG");
 }
