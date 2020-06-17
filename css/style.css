@@ -211,7 +211,7 @@ body {
   cursor: default;
   background: #FFF;
   background-image: url("../media/images/wood.jpg");
-  font-family: "Chalkduster";
+  font-family: "Chalkduster", 'Walter Turncoat';
   color:black;
   letter-spacing: 0.2rem;
   background-size: cover;
