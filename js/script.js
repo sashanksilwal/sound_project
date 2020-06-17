@@ -2,6 +2,7 @@ let box = document.getElementById("box");
 let bg_image = document.getElementById("bg_image");
 let pauseBtn = document.getElementById("pausebtn");
 let homeBtn = document.getElementById("homebtn");
+let BlackBG= document.getElementById("black-bg");
 
 
 let main_page=false;
@@ -93,6 +94,8 @@ itemFrame4.addEventListener("click",()=>{
     $("#item4").fadeOut(4000);
     $('#pausebtn').fadeIn(500);
     $("#typedtext").fadeIn(0);
+    $('#black-bg').hide();
+
     bg_image.style.background = "url('white.png')"; 
     frame_page= true;
     ball_page = false;
@@ -124,7 +127,9 @@ box.addEventListener("click",()=>{
     main_page = true;
     box.style.display="none";
     // $('#bg_image').css("background-image" , "url(media/images/black.png)");
-    bg_image.style.background = "url('black.png')";
+    // bg_image.style.background = "url('black.png')";
+    bg_image.style.display="none";
+    $('#black-bg').fadeIn(500);
     // $('#bg_image').fadeIn(500);
     // bg_image.fadeOut(1000, function(){
     //   image.css("background-image" , "url('media/images/black.png')");
@@ -166,7 +171,8 @@ function myFunction() {
     main_page=false;
     second_page=true;
     console.log("hello you have ended the sound");
-    $('#pausebtn').fadeOut(500); 
+    $('#pausebtn').fadeOut(500);
+    $('#bg_image').show(); 
     bg_image.style.background = "url('media/images/Pic.png')"; 
     bg_image.setAttribute("class", "bg_image_second");
 
@@ -247,6 +253,7 @@ function changeBackground(a,b,c){
     $("#item1").fadeOut(a);
     $("#item2").fadeOut(b);
     $("#item3").fadeOut(c);
+
     bg_image.style.background = "url('black.png')"; 
 }
 
