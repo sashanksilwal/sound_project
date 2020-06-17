@@ -123,7 +123,13 @@ box.addEventListener("click",()=>{
     $('#pausebtn').fadeIn(500); 
     main_page = true;
     box.style.display="none";
-    bg_image.style.background = "url('black.png')"; 
+    // $('#bg_image').css("background-image" , "url(media/images/black.png)");
+    bg_image.style.background = "url('black.png')";
+    // $('#bg_image').fadeIn(500);
+    // bg_image.fadeOut(1000, function(){
+    //   image.css("background-image" , "url('media/images/black.png')");
+    //   image.fadeIn(1000);
+    // });  
     Footsteps_mp3.play();
 })
 

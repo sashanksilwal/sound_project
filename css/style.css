@@ -20,8 +20,21 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  transition: 0.5 linear all;
+  /*transition: 0.5 linear all;*/
+/*  -webkit-animation: fade 5s ; 
+  animation: fade 5s ;*/
+  transition: background .2s ease;
 }
+
+/*@-webkit-keyframes fade {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }
+@keyframes fade {
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+  }*/
+
 
 .box_img{
   z-index: 2;
