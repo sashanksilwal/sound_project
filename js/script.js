@@ -32,6 +32,29 @@ let item1 = false,
     item3 = false,
     item4 = false;
 
+      // set up text to print, each item in array is new line
+var aText = new Array(
+    "To live in this world",
+    "you must be able",
+    "to do three things:",
+    "to love what is mortal;",
+    "to hold it",
+    "against your bones knowing",
+    "your own life depends on it;",
+    "and, when the time comes to let it go,",
+    "to let it go"
+    );
+
+var iSpeed = 100; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+    
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+    
+    
 fab.on('click', openFAB);
 overlay.on('click', closeFAB);
 
@@ -76,17 +99,24 @@ itemFrame4.addEventListener("click",()=>{
     pills_page= false;
     car_page  = false;
     Frame_mp3.play();
-    setTimeout(() =>{typewriter();}, 86000)
+    console.log(Frame_mp3.currentTime);
+    // setTimeout(() =>{typewriter();}, 6000)
+
     // $('#pausebtn').fadeOut(110000);
     // if (end== true){
     //   console.log("hello deer");
     //   $('#homebtn').fadeIn(500);
 
     // }
-
-
 })
 
+Frame_mp3.addEventListener("timeupdate", ()=>{
+    console.log(Frame_mp3.currentTime);
+    if(Frame_mp3.currentTime > 85.782624384 && Frame_mp3.currentTime <86){
+        typewriter();
+        // setTimeout(console.log(10), 25000);
+    }
+})
 
 box.addEventListener("click",()=>{   
     $("#infodiv").fadeOut(500);
@@ -231,54 +261,32 @@ function openFAB(event) {
   }
   
 
-  // set up text to print, each item in array is new line
-var aText = new Array(
-    "To live in this world",
-    "you must be able",
-    "to do three things:",
-    "to love what is mortal;",
-    "to hold it",
-    "against your bones knowing",
-    "your own life depends on it;",
-    "and, when the time comes to let it go,",
-    "to let it go"
-
-    );
-    var iSpeed = 100; // time delay of print out
-    var iIndex = 0; // start printing array at this posision
-    var iArrLength = aText[0].length; // the length of the text array
-    var iScrollAt = 20; // start scrolling up at this many lines
-     
-    var iTextPos = 0; // initialise text position
-    var sContents = ''; // initialise contents variable
-    var iRow; // initialise current row
-     
-    function typewriter()
-    {
-     sContents =  ' ';
-     iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("typedtext");
-     
-     while ( iRow < iIndex ) {
-      sContents += aText[iRow++] + '<br />';
-     }
-     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
-     if ( iTextPos++ == iArrLength ) {
-      iTextPos = 0;
-      iIndex++;
-      if ( iIndex != aText.length ) {
-       iArrLength = aText[iIndex].length;
-       setTimeout("typewriter()", 500);
-      }
-     } else {
-      setTimeout("typewriter()", iSpeed);
-      end=true;
-      console.log("it has finished writing");
-      $('#pausebtn').fadeOut(5000);
-      $('#homebtn').fadeIn(10000)
-
-     }
+function typewriter()
+{
+    sContents =  ' ';
+    iRow = Math.max(0, iIndex-iScrollAt);
+    var destination = document.getElementById("typedtext");
+    
+    while ( iRow < iIndex ) {
+    sContents += aText[iRow++] + '<br />';
     }
+    destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+    if ( iTextPos++ == iArrLength ) {
+    iTextPos = 0;
+    iIndex++;
+    if ( iIndex != aText.length ) {
+    iArrLength = aText[iIndex].length;
+    setTimeout("typewriter()", 500);
+    }
+    } else {
+    setTimeout("typewriter()", iSpeed);
+    end=true;
+    // console.log("it has finished writing");
+    $('#pausebtn').fadeOut(5000);
+    $('#homebtn').fadeIn(10000)
+
+    }
+}
     
     
    
