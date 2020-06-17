@@ -210,7 +210,7 @@ body {
 .fab.active {
   cursor: default;
   background: #FFF;
-  background-image: url("../media/images/woodDesign.jpg");
+  background-image: url("../media/images/wood.jpg");
   font-family: "Chalkduster";
   color:black;
   letter-spacing: 0.2rem;
