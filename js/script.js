@@ -283,7 +283,7 @@ function typewriter()
     end=true;
     // console.log("it has finished writing");
     $('#pausebtn').fadeOut(5000);
-    $('#homebtn').delay( 2000 ).fadeIn(10000)
+    $('#homebtn').fadeIn(10000)
 
     }
 }
